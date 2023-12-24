@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmln:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title></title>
+
+	<link rel="stylesheet" type="text/css" media="all"
+			href="../static/css/mycss.css" th:href="@{/css/mycss.css}" />
+
+</head>
+<body class="center" th:each = "p: ${profile}">
+	<header th:insert="fragments/header.html :: header"></header>
+
+	<br>
+
+	<table>
+		<tr>
+			<td class="heading">User name:</td>
+			<td th:text = "${p.username}"></td>
+		</tr>
+		<tr>	
+			<td class="heading">Email:</td>
+			<td th:text = "${p.email}"></td>
+		</tr>
+	</table>
+	
+	<br><br>
+	
+	<h1>Edit Details</h1>
+		<!--	Form for editing game details	-->
+		<form method="post" th:action="@{/editUser/} + ${user.userId}" th:object="${user}">
+    <table>
+        <tr>
+            <td>User name:</td>
+            <td><input type="text" name="username" th:field="*{username}" /></td>
+        </tr>
+        <tr>
+            <td>Email:</td>
+            <td><input type="text" name="email" th:field="*{email}" /></td>
+        </tr>
+        <tr>
+            <td>Password:</td>
+            <td><input type="text" name="password" th:field="*{password}" /></td>
+        </tr>
+    </table>
+
+    <br>
+    <input class="bigButton" type="submit" value="Edit User Info" />
+</form>
+
+
+
+	
+	<br>
+	
+	<a th:href = "@{/deleteUser}"><button class="bigButton">Delete Account</button></a>
+	
+	<br><hr><br>
+	
+	<a th:href = "@{/viewOwnedGames}"> <button class="bigButton">View Purchased Games</button> </a>
+	
+	<br><br>
+	
+	<a th:href = "@{/browseGames}"> <button class="bigButton">View Games</button> </a>
+	
+	
+	
+	<footer th:replace="~{fragments/footer.html :: footer}"></footer>
+</body>
+</html>

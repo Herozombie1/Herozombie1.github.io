@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html xmln:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Game Details</title>
+
+	<link rel="stylesheet" type="text/css" media="all"
+		href="../static/css/mycss.css" th:href="@{/css/mycss.css}" />
+	
+
+</head>
+<body th:each = "vg: ${videoGame}" class="center">
+	<header th:insert="~{fragments/header.html :: header}"></header>
+
+	<h1>Game Details</h1>
+	<table>
+		<tr>
+			<td class="heading">Title:</td>
+			<td th:text = "${vg.title}"				></td>
+		</tr>
+		<tr>	
+			<td class="heading">Publisher:</td>
+			<td th:text = "${vg.publisher}"			></td>
+		</tr>
+		<tr>	
+			<td class="heading">Price:</td>
+			<td th:text = "${vg.price}"				></td>
+		</tr>
+		<tr>
+			<td class="heading">Description:</td>
+			<td th:text = "${vg.description}"		></td>
+		</tr>
+		<tr>
+			<td class="heading">Size:</td>
+			<td th:text = "${vg.size}"				></td>
+		</tr>
+		<tr>
+			<td class="heading">Microtransactions:</td>
+			<td th:text = "${vg.microtransactions}"	></td>
+		</tr>
+	</table>
+	
+	<br>
+	
+	<div th:if="${userRole == 'ROLE_ADMIN'}">
+		<br><hr>	
+		<h1>Edit Details</h1>
+		<!--	Form for editing game details	-->
+		<form method="post" th:action="@{/editVideoGame/} + ${vg.videoGameId}" th:object="${videoGame}">
+								<input type="hidden"	name="videoGameId"		th:field="*{videoGameId}"/>	
+			<table>
+				<tr>
+					<td>Title:</td>
+					<td><input type="text"		name="title"			th:field="*{title}"/></td>	
+				</tr>
+				<tr>		
+					<td>Publisher:</td>
+					<td><input type="text"		name="publisher"		th:field="*{publisher}"/></td>
+				</tr>
+				<tr>			
+					<td>Price:</td>
+					<td><input type="number"	name="price"			th:field="*{price}"/></td>
+				</tr>
+				<tr>				
+					<td>Description:</td>
+					<td><input type="text"		name="description"		th:field="*{description}"/></td>
+				</tr>
+				<tr>		
+					<td>Size:</td>
+					<td><input type="text"		name="size"				th:field="*{size}"/></td>
+				</tr>
+				<tr>		
+					<td>Microtransactions:</td>
+					<td><input type="checkbox"	name="microtransactions"th:field="*{microtransactions}"/></td>
+				</tr>																							
+			</table>
+			
+			<br>
+			<input class="bigButton" type="submit"	value="Edit Game"/>
+		</form>
+		<br>
+		<a th:href = "@{/deleteVideoGame/}+${vg.videoGameId}"><button class="bigButton">Delete Game</button></a>
+		<br>
+		<br><hr>
+	</div>
+	
+	<br>
+	
+	<div th:if="${logStatus == true}">
+		<a th:href = "@{/addToCart/}+${vg.videoGameId}"><button class="bigButton">Add to Cart</button></a>
+		<br><br><hr><br>
+	</div>
+	
+	<a th:href = "@{/browseGames}"><button class="bigButton">Back to Browsing</button></a>
+	
+	<br><br><br>
+
+	<footer th:replace="~{fragments/footer.html :: footer}"></footer>
+</body>
+</html>

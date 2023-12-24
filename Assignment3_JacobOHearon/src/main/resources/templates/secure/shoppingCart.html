@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmln:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Shopping Cart</title>
+
+	<link rel="stylesheet" type="text/css" media="all"
+		href="../static/css/mycss.css" th:href="@{/css/mycss.css}" />
+
+</head>
+<body class="center">
+	<header th:insert="~{fragments/header.html :: header}"></header>
+	
+	<h1>Your Shopping Cart</h1>
+		
+		<table th:if="${shoppingCart != null AND shoppingCart != ''}">
+		<tr class="heading">
+			<td>Title</td>
+			<td>Price</td>
+			<td>View Details</td>
+			<td>Remove from Cart</td>
+		</tr>
+			<tr th:each = "s : ${session.shoppingCart}">
+			<!--	Display main properties of the video game 	-->
+				<td th:text = "${s.title}"		></td>
+				<td th:text = "${s.price}"		></td>
+			
+			<!-- 	View details of the video game	-->
+				<td><a th:href = "@{/viewDetails/}+${s.videoGameId}"><button>View</button></a></td>
+			
+			<!--	Remove function of each row	-->
+				<td><a th:href = "@{/removeFromCart/}+${s.videoGameId}"><button>Remove</button></a></td>
+
+			</tr>
+		</table>
+		
+		<br><hr><br>
+		<a th:href = "@{/purchaseItemsInCart}"><Button class="bigButton">Purchase Items</Button></a>
+		
+		<a th:href = "@{/browseGames}"><Button class="bigButton">Back to Browsing</Button></a>
+	
+		<footer th:replace="~{fragments/footer.html :: footer}"></footer>
+</body>
+</html>
