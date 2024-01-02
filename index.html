@@ -33,10 +33,61 @@
             height:300px;
             border: 2px solid #000;
           }
-          #ugh
+          #utube
           {
-            width:300px;
-            height:450px;
+            font-family:sans-serif;
+          }
+          #utube:hover
+          {
+            background-color: red;
+            color:white;
+            font-family:sans-serif;
+          }
+          #omori:hover
+          {
+            background-color: black;
+            color:white;
+          }
+          #purple
+          {
+            background-color: #5D3FD3;
+          }
+          #realAside
+          {
+            font-family:sans-serif;
+            background-color: #5D3FD3;
+          }
+          .funnyBackground
+          {
+            background-image: url('images/pogBackground.png');
+            width:100%;
+            background-size: cover;
+            height: 450px;
+            background-position:0 -50px;
+            margin: 0;
+            line-height: normal;
+            overflow: visible;
+            background-repeat: no-repeat;
+          }
+          .bubble
+          {
+            position: relative;
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+          }
+
+
+          /* Phone CSS Stuff */
+          @media screen and (max-width: 1000px) 
+          {
+            .funnyBackground
+            {
+              height: 300px;
+              background-position:center;
+            }
           }
         </style>
     </head>
@@ -56,57 +107,95 @@
             </a>
             <!-- <video src="images/Cat.mp4" controls id="cat"></video>   (Use this somewhere)-->
             <h2>Thanks for Stickin Around</h2>
-            <p>Yeah I put a gif of Yoshi's island there, game's pretty neat</p>
-            <hr class=large noshade color=black>
+            <p>   Yeah I put a gif of Yoshi's island there, game's pretty neat
+            <br>
+            <br>  (I'll do mobile implentation eventually I promise)
+            </p>
+            <hr id="long" noshade color=black>
         </header>
 
+        <nav>
+          <h2>I actually have something I can link to now</h2>
+          <a id="utube" class=button href="https://www.youtube.com/@herozombie1302" target="Youtube">My Youtube Channel</a> 
+          <p>nlg, I just post clips of stuff on there, mostly league too</p>
+          <hr noshade color=black>
+        </nav>
 
+
+        <!-- Paragraph about how amazing I am and how unamazing I am -->
+        <article>
+          <h3>What the Hell is this?</h3>
+            So, you may be wondering "what the hell is this?", and well to put it briefly I made a website out of boredom.
+            Honest I don't really have a plan for this thing other than it being something quirky to link in my discord bio.    
+          <br><br>
+            So if you'd like to stick around and just sorta, scroll through whatever I end up making that'd be real neat.
+            This is probably gonna end up looking like a slightly high effort shitpost anyway, so oh well
+          
+        </article>
+
+
+        <br>
+        <hr noshade color=black class="mini">
+        <br>
+
+        <!-- Article about where all the shit went -->
+        <article>
+          Oh right side thing
+          <br>
+          So if you've seen the site before, you may be wondering:
+          <h4>Hey Jacob, Where'd half the shit go?</h4>
+          Well that's the cool thing, idk. Well I kinda know but...
+          <br><br>
+          Okay long story short I used to host my website through my school.
+          It was free, so like, why not?
+          <br><br>
+          Well a bit ago I lost my free hosting privileges since I finished all my online programming courses, and along side it, the school work I had uploaded before is now lost to whatever drive I saved it on.
+          So as far as I care, that schoolwork is lost to time.
+          It wasn't all that impressive and it's still probably around here somewhere, I just don't care enough to upload it right now.
+          <br><br>
+          As a side effect I am now on Github, so that's neat.
+          Anyway yeah old stuff's gone, gonna try to add new stuff but that's been annoying cause Spring Boot stuff does not like me.
+          <br><br>
+        </article>
+
+
+        <!-- New Button? -->
+        <aside id="realAside" class="funnyBackground">
+          <hr id="long" noshade color=black>
+          <br>
+          <h4 class="bubble">Oooo where could this go?</h4>        
+          <br><a class=button href="tictactoe.html">Mystery Button</a>
+          <br><br>
+        </aside>
+
+        <hr id="long" noshade color=black>
+        <br>
 
         <!-- Navigation bar I kinda just fucked around with a little -->
         <nav>
-          <h2>Imma throw some things here simply cause I can</h2>
+          <h2>I moved the shitpost links down here :)</h2>
           <a class=button href="https://youtu.be/GfT5CqrWJW0" target="cats">Cats (That's it that's the whole link)</a> <br>
-          <a class=button href="https://store.steampowered.com/app/1150690/OMORI/" target="omori">Cool RPG that made me sad</a> <br>
+          <a id="omori" class=button href="https://store.steampowered.com/app/1150690/OMORI/" target="omori">Cool RPG that made me sad</a> <br>
           <a class=button href="https://store.steampowered.com/app/1295510/DRAGON_QUEST_XI_S_Echoes_of_an_Elusive_Age__Definitive_Edition/" 
             target="I also really like it now(This is bad target text, but it's a link to dragon quest lmao)">Fun RPG that didn't make me sad</a> <br>
           <a class=button href="css/advanced.css" target="showoff...">My CSS Page if you're curious</a> <br>
           <a class=button href="javascript/index-script.js" target="literally no one cares">And finally(now that I'm using it) My JS page</a>
+          <br id="smallB">
           <p>
             Don't be afraid, those button things are just links, totally safe
           </p>
           <hr noshade color=black class=mini>
           <p>
-            Alright that's all for now, I'm outta ideas
+            Alright that's all for now, I'm outta ideas.
+            <br>
+            I'll definitely come back with content at some point, promise
+            <br><br>
+            I do have a whole ass assignment to put on here, it's just a pain figuring out how to actually do it, as the aforementioned Spring Boot is a pain to just throw into something willy nilly
           </p>
-          <hr noshade color=black>
         </nav>
 
-        <!-- New Button? -->
-        <aside id="realAside">
-          Oooo where could this go?             <br>
-          <a class=button href="tictactoe.html">Mystery Button</a>
-        </aside>
-
 
         <br>
-        <hr noshade color=black>
-        <br>
-
-        <!-- Link to Java Assignment -->
-        <article>
-            <h2>Work in Progress!</h2>
-            Link to my java assignment (Hopefully this works lol)
-            <a class=buttonn href="Assignment3_JacobOHearon/src/main/resources/templates/index.html">Java Final Assignment</a>
-        </article>
-        
-        <!-- Work in progress Aside -->
-        <!-- (Might wanna keep this at the bottom lol) -->
-        <aside>
-          Man this site took a bit of a hit <br>
-          I'll work on it later I promise <br>
-          <img id="ugh" src="images/ugh.png" alt="Pain"><br>
-          Illustration of me looking over my god awful code
-        </aside>
 
 
         <!-- Good ol' copyright footer -->

@@ -1,4 +1,21 @@
 /* Wow try to keep this place organized my god */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center; /* Center text */
+}
+
+/* Media query for screens smaller than 600px (typical mobile devices) */
+@media screen and (max-width: 600px) 
+{
+  body
+  {
+    /* Increase text size for mobile */
+    font-size: 16px; 
+  }
+}
+
 
 /*Big boi tags*/
 html
@@ -8,26 +25,30 @@ html
 }
 header
 {
-  width:1000px;
-  padding: 1px 0px 0px 0px;
+  text-align: center;
+  margin: 0 auto;
+  width:100%;
+  padding: 10px 0px 0px;
   background-color:#5D3FD3;
   border-radius:20px 20px 0px 0px;
 }
 body
 {
-    max-width: 1000px;
-    width:100%;
-    margin: 10px auto;
+  max-width: 1000px;
+  width:100%;
+  margin: 10px auto;
 
-    background-color: #EFC050;
-    border-radius:25px;
-    font-family:"sans-sarif";
-    text-align:center;
-    box-shadow: rgba(0, 0, 0, 0.3) 8px 10px 0px;
+  background-color: #EFC050;
+  border-radius:25px;
+  font-family:"sans-sarif";
+  text-align:center;
+  box-shadow: rgba(0, 0, 0, 0.3) 8px 10px 0px;
 }
 article
 {
   font-size:22px;
+  padding-left:15%;
+  padding-right:15%;
 }
 aside
 {
@@ -67,7 +88,10 @@ header p
 hr
 {
   width:100%;
-  width:600px;
+  margin-left:auto;
+  margin-right:auto;
+  padding: 0;
+  box-sizing: border-box;
 }
 a
 {
@@ -76,7 +100,8 @@ a
 p
 {
   font-size:20px;
-  height: 20%;
+  padding-left:15%;
+  padding-right:15%;
 }
 tr
 {
@@ -101,22 +126,16 @@ label
     text-align:center;
     border:#222 solid;
     border-radius: 20px;
-    /* color x y blur */
-    /* red, green, blue from 0-255, alpha 0-1 */
     box-shadow: rgba(0, 0, 0, 0.3) 10px 10px 0px;
 }
 .button:hover
 {
-    background-color:lightgreen;
-    color:black;
+    background-color:indigo;
+    color:white;
 }
 .mini
 {
   width:300px;
-}
-.large
-{
-  width:998px;
 }
 .difficulty
 {
@@ -129,7 +148,22 @@ label
   height:200px;
   width:200px;
 }
-#realAside
+#long
 {
-  font-family:sans-serif;
+  width:100%;
+  margin-left:auto;
+  margin-right:auto;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#smallB
+{
+  height:60%;
+}
+#dhr
+{
+  width:50%;
+  padding: 0;
+  box-sizing: border-box;
 }
