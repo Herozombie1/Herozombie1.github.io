@@ -6,13 +6,12 @@ body {
   text-align: center; /* Center text */
 }
 
-/* Media query for screens smaller than 600px (typical mobile devices) */
-@media screen and (max-width: 600px) 
+/* Phone CSS Stuff */
+@media screen and (max-width: 1000px) 
 {
   body
   {
-    /* Increase text size for mobile */
-    font-size: 16px; 
+    font-size: 30px; 
   }
 }
 
